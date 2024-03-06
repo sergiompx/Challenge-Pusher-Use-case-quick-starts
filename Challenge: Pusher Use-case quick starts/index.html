@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+
+const xValues = ["Spain", "Egipt", "Greece", "Turkey", "Argelia"];
+const yValues = [88, 35, 27, 24, 12];
+const barColors = [
+  "#00FF99",
+  "#FFFF99",
+  "#FF9966",
+  "#9999CC",
+  "#CC66FF"
+];
+
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Aceitunillas Production 2018"
+    }
+  }
+});
+
+</script>
+
+</body>
+
+</html>
